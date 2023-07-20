@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-base-color: #1c2b3508;
+  scrollbar-face-color: rgb(255, 173, 72);
+  font-family: 'Lato', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1c2b3508;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(252, 146, 15);
+  box-shadow: inset 0 0 3px #1C2B35;
+}
+
+/* header */
+
+header {
+  background: #1C2B35;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.toggleHeader {
+  height: 200px;
+}
+
+header nav {
+  width: 90%;
+  margin: auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.navToggle {
+  height: 100px;
+}
+
+header .logo {
+  width: 140px;
+  height: 40px;
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+}
+
+
+.main-menu li {
+  padding: 0 36px;
+}
+
+.main-menuToggle {
+  display: block;
+  position: absolute;
+  background: #1C2B35;
+  right: 10%;
+  z-index: 100;
+  top: 0;
+  padding: 5px 0;
+  transition: all 0.5s;
+}
+
+.main-menuToggle li {
+  padding: 10px 20px;
+  transition: all 0.5s;
+}
+
+.main-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px;
+  transition: all 0.5s;
+}
+
+.toggle {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.toggle svg {
+  width: 26px;
+  fill: #fff;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .main-menu {
+    display: none;
+  }
+
+  .main-menuToggle {
+    background: transparent;
+    left: 0;
+    transform: translate(0);
+    top: 30%;
+    width: 100%;
+  }
+
+  .toggleHeader {
+    height: 270px;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+
+/* body content */
+
+.content {
+  display: flex;
+
+}
+
+.cart-section {
+  background: rgba(255, 153, 0, 0.30);
+  padding-top: 80px;
+  width: 30%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+  width: 30%;
+}
+
+.product {
+  width: 300px;
+  height: 508px;
+  border-radius: 8px;
+  border: 1px solid #95A0A7;
+  position: relative;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  padding: 150px 50px;
+  width: 70%;
+}
+
+.product-img {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.product-img img {
+  width: 286px;
+  height: 286px;
+  border-radius: 8px;
+}
+
+.product-contents {
+  padding: 0 15px;
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
+  color: #0E161A;
+}
+
+.price {
+  color: #0E161A;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.026px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.short-details {
+  color: #2A414F;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.048px;
+}
+
+.cart {
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px 8px 8px;
+  border: 1px solid #95A0A7;
+  background: #FFE0B3;
+  width: 100%;
+  color: #0E161A;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.188px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart:hover {
+  background: #ffc671;
+}
+
+.cart img {
+  margin-left: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-section h5 {
+  color: #1C2B35;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.cart-section p {
+  color: #2A414F;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px;
+  padding: 0 20px;
+}
+
+.cart-section p.grand {
+  color: #0E161A;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
+}
+
+.cancel,
+.cash {
+  display: block;
+  width: 232px;
+  height: 48px;
+  border-radius: 4px;
+  border: 0;
+  margin: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px;
+}
+
+.cancel svg,
+.cash svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+}
+
+.cancel {
+  background-color: #FF3030;
+  transition: all 0.5s;
+}
+
+.cash {
+  background-color: #FF9900;
+  transition: all 0.5s;
+}
+
+.cancel:hover {
+  background-color: #ba0000;
+}
+
+.cash:hover {
+  background-color: #b36b00;
+}
+
+@media only screen and (min-width: 2000px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1368px) {
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    padding: 150px 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 992px) {
+  .cart-section {
+    width: 40%;
+  }
+
+  .products {
+    width: 60%;
+    padding: 150px 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fixed {
+    right: 5%;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .cart-section {
+    width: 50%;
+  }
+
+  .products {
+    width: 50%;
+  }
+
+  .fixed {
+    right: 10%;
+  }
+}
+
+@media only screen and (max-width: 620px) {}
+
+@media only screen and (max-width: 592px) {
+  .content {
+    display: block;
+  }
+
+  .cart-section {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .products {
+    width: 100%;
+    padding: 100px 0;
+  }
+
+  .cancel,
+  .cash {
+    margin-left: 30px;
+  }
+
+  .fixed {
+    position: static;
+    width: 100%;
+  }
+
+  .cart-section h5 {
+    padding-left: 20px;
+    text-align: start;
+    width: 100%;
+  }
+}
