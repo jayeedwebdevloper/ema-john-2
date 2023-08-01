@@ -36,7 +36,7 @@ const ContentItems = () => {
     }
 
     return (
-        <div className="container">
+        <div>
             <div className="content">
                 <div className="products">
                     {
